@@ -44,11 +44,15 @@ h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
-
 p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
+	text-align: justify;
+	
+}
+.header-content-inner p {
+	text-align: center;
 }
 
 .bg-primary {
@@ -179,7 +183,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/snow_aggieland_2.jpg);
+    background-image: url(http://i.imgur.com/jJjITfC.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -212,12 +216,20 @@ header .header-content .header-content-inner hr {
 
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     color: rgba(255,255,255,1);
 }
 
+p, .item-content li {
+    font-size: 12px;
+}
+
 @media(min-width:768px) {
+p, .item-content li {
+    font-size: 14px;
+}
+
     header {
         min-height: 100%;
     }
@@ -268,7 +280,7 @@ header .header-content .header-content-inner p {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 750px;
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -280,7 +292,7 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: rgba(0,160,176,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -521,4 +533,95 @@ header a:focus,
 .bg-primary a:hover,
 .bg-primary a:focus {
     color: white;
+}
+
+
+.carousel-indicators li{
+	font-size: 8pt;
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	font-weight: bold;
+    text-indent:0;
+    width: 23px;
+    height: 23px;
+	line-height: 20px;
+    background-color: transparent;
+	border: 1px solid #00A0B0;
+	color: #00A0B0;
+	border-radius: 0px;
+}
+
+
+.carousel-indicators li.red {
+	border-color: red;
+	color: red;
+}
+
+.carousel-indicators li.black {
+	border-color: black;
+	color: black;
+}
+
+.carousel-indicators li.active {
+    width: 26px;
+    height: 26px;
+	line-height: 22px;
+}
+
+
+button {
+   outline:none;
+   border:none;
+   padding: 0px;
+}
+button::-moz-focus-inner {
+   border: 0;
+}
+
+.item .test {
+	background-color: red;
+	height: 200px;
+}
+
+.item .item-content {
+	padding-top: 30px;
+}
+
+.item .item-content .picture-fill {
+	background-color: red;
+	height: 100px;
+}
+
+.panel {
+	border: 0px;
+}
+
+.panel-group .panel+.panel {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.item-block li {
+	list-style: none;
+	font-size: 9pt;
+	word-break: break-all;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+.portfolio-content-sm, .portfolio-content-lg {
+	min-height: 200px;
+}
+
+.carousel-indicators {
+	top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-indicators {
+		top: 10px;
+	}
+}
+
+.collapse-lg, .collapse-sm {
+	overflow-y: hidden;
 }
