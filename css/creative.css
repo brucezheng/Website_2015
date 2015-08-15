@@ -292,7 +292,6 @@ p, .item-content li {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(0,160,176,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -322,7 +321,18 @@ p, .item-content li {
     font-size: 18px;
 }
 
+.expanded .portfolio-box-caption{
+    background: rgba(160,160,160,.7);
+    opacity: 1;
+    color: transparent;
+}
+
+.expanded .text-faded {
+	color: transparent;
+}
+
 .portfolio-box:hover .portfolio-box-caption {
+    background: rgba(160,160,160,.35);
     opacity: 1;
 }
 
