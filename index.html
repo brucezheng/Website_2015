@@ -66,7 +66,7 @@
                         <a class="page-scroll"href="#services">Work and School</a>
                     </li>
                     <li>
-                        <a class="page-scroll"href="#contact">Contact</a>
+                        <a class="page-scroll"href="#contact">Etc</a>
                     </li>
                 </ul>
             </div>
@@ -93,10 +93,10 @@
                     <hr class="light">
 					
 					<div class="hidden-xs col-sm-6 col-lg-3 profile-pic"id = "profile-pic-lg">
-						<img class="img-circle"id="profile-img-lg"src="./img/profile.jpg"/>
+						<img class="img-circle"id="profile-img-lg"src="http://i.imgur.com/rGSe2Cg.jpg"/>
 					</div>
 					<div class="visible-xs-block col-xs-12 profile-pic"id = "profile-pic-xs">
-						<img class="img-circle"id="profile-img-xs"src="./img/profile.jpg"/>
+						<img class="img-circle"id="profile-img-xs"src="http://i.imgur.com/rGSe2Cg.jpg"/>
 					</div>
 					<div class="col-lg-9 col-sm-6 col-xs-12 profile-blurb">
 						<div class="col-lg-4 col-sm-12 text-left ">
@@ -108,11 +108,17 @@
 						</div>
 						<div class="col-lg-4 col-sm-12 text-left">
 							<h3>A Student</h3>
-							I hope never to stop being one. 
+							<p>
+							I hope never to stop being one.
+							Currently I am an actual college student at Texas A&M University, pursing a double major of Applied Mathematics and Computer Science.
+							There are no stupid questions, except for "What is the practical application of this?" when asked about Mathematics.
+							</p>
 						</div>
 						<div class="col-lg-4 col-sm-12 text-left">
 							<h3>A Developer</h3>
-							I'm 
+							I love making stuff. The 'cooler' stuff is, the more I enjoy making it.
+							I hope to one day work on something that can improve the lives of others, which is a bit difficult as a computer programmer.
+							In the meanwhile, you can check out the stuff I've made so far below! Check it out!
 						</div>
 					</div>
                 </div>
@@ -125,9 +131,9 @@
             <div class="row no-gutter panel-group visible-xs-block"id="accordion-xs">
 				<div class="panel panel-default col-lg-4 col-sm-6">
 					<div role="tab"id="heading-xs-1">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-1"aria-expanded="false"aria-controls="collapse-xs-1"class="portfolio-box">
-							<img src="img/portfolio/arcs.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-1" aria-expanded="false"aria-controls="collapse-xs-1"class="portfolio-box">
+							<img src="img/portfolio/arcs_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										Web App
@@ -136,20 +142,69 @@
 										Arcs
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
-					<div id="collapse-xs-1"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-1">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+					<div id="collapse-xs-1"class="collapse-xs panel-collapse collapse" role="tabpanel"aria-labelledby="heading-xs-1">
+						<div id="portfolio-content-xs-1" class="portfolio-content-xs panel-body">
+							<div style="text-align: center;">
+					<h2>Arcs</h2>
+					<h4>December 2014</h4>
+					<hr class="primary">
+					<a href="http://brucezheng.com/index.html">Application</a>
+						
+					<!--div id="arcs-sm-snap-container">
+						<div id="arcs-sm-place">
+							<img class="image-blur" src="img/portfolio/arcs_sm_play.png" width="657" height="345">
+							<button id="arcs-sm-playbutton">
+							<div class="glyphicon glyphicon-play"></div>
+							</button>
+						</button>
+						</div>
+						<embed id="arcs-sm-app" src="http://brucezheng.com/arcs_sm.html"></embed>						
+					</div-->
+					<hr class="primary">
+					<div class="col-xs-12">
+						<p>
+						<b>Arcs</b> is a web application which demonstrates how shortest distance paths on the earth appear 'curved' on most rectangular maps.
+						<b>Arcs</b> was built using a free 3d Javscript library called <a href="http://www.kevs3d.co.uk/dev/phoria/">Phoria</a> which itself uses HTML5's canvas library.
+						I had to write most of the logic of displaying paths and calculating their projections.
+						I also implemented mobile event triggers, since Phoria's mouse handling does not include this.
+						</p>
+						<p>
+						I thought of this project following a discussion I had with my roommate and his girlfriend.
+						She had recently got back to Texas following a six month mission trip in India.
+						We talked about how her flight back took her much farther north than we would have expected, because it appeared as a curve on the map.
+						</p>
+						<p>
+						I realized this behavior of maps was related to the natural distortions of map projections.
+						The earth, of course, is not flat, which means that we have to make some sacrifices with geometric accuracy when we project the earth's surface onto a flat map. 
+						The <a href="https://en.wikipedia.org/wiki/Mercator_projection">Mercator Projection</a>, for example, greatly exaggerates the sizes of areas near the north and south pole, causing Greenland to look much larger than
+						it actually is:
+						</p>
+						<div style="width:640px;" class="scale-proj-container image-center">
+						<img style="width:640px" class="scale-proj-img img-responsive" src="http://i.imgur.com/c1x61Tg.png">
+						Image Credit: Pratham
+						</div>
+						<p>
+						Other kinds of projections do preserve relative area, but at the cost of distorting angles. 
+						It is a well known mathematical result that it is impossible for a map projection to both be conformal (angle-preserving) and area-preserving.
+						A shortest path between two points on a surface is called a Geodesic.
+						On a plane, all Geodesics are line segments, but on a sphere, it is curved.
+						Similarly, when Geodesics are projected, they also tend to appear curved.
+						There are some projections where Geodesics do appear as line segments, which are called <a href="https://en.wikipedia.org/wiki/Gnomonic_projection">Gnomic Projections</a>.
+						Surprisingly, a Gnomonic Projection is actually not conformal, which is a misconception I had.
+						</p>
+					</div>
+						</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default col-xs-12">
 					<div role="tab"id="heading-xs-2">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-2"aria-expanded="false"aria-controls="collapse-xs-2"class="portfolio-box">
-                        <img src="img/portfolio/ray.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-2"aria-expanded="false"aria-controls="collapse-xs-2"class="portfolio-box">
+                        <img src="img/portfolio/fire_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										GameJam
@@ -158,20 +213,55 @@
 										Firebot
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
-					<div id="collapse-xs-2"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-2">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+					<div id="collapse-xs-2"class="collapse-xs panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-2">
+						<div id="portfolio-content-xs-2" class="bg-dark portfolio-content-xs panel-body">
+							<div style="text-align: center;">
+						<h2>Firebot</h2>
+						<h4>November 2014</h4>
+						<hr class="light">
+						<div id="eport-xs-snap-container">
+							<div id="eport-xs-snap">
+								<img class="image-responsive image-border" src="img/portfolio/fire_snap_sm.png">
+							</div>
+						</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Executable</a> &bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Github</a>
+						<hr class="light">
+						<div class="col-xs-12">
+							<p>
+							<b>Firebot</b> is a game I wrote with my friend Andy Tran during the <a href="http://live.viz.tamu.edu/newsy/2014/10/26/live-lab-game-jam/">2014 Live Lab GameJam</a> at Texas A&M University.
+							The objective of the game is to put out fires and fight fire themed enemies.
+							</p>
+							<p>
+							The main character is a floating robot that is armed with a hose and a gun.
+							Both weapons produce a lot of recoil, which can be used in some platforming challenges.
+							One gameplay mechanic I wanted to include was to have enemies be invulnerable when they are on fire; the player would have to extinguish them before shooting them.
+							Unfortunately we were only able to get static fire and one enemy type into the game before the GameJam ended.
+							</p>
+							<p>
+							We used Unity as our game development environment.
+							Before writing this game I had zero experience with Unity or game development platforms, or even C#, which is what Unity uses.
+							A lot of the code for this project was re-purposed from Unity's tutorial platformer game, although very little original code remained by the end.
+							Art assets were lazily made in MS Paint; originally the Firebot was meant to have legs.
+							</p>
+							<p>
+							I don't have any plans on continuing this particular project.
+							I didn't really like how the movement and the 'feel' of the game turned out; playtesters were often frustrated with how difficult basic platforming was (although the playtesters' children loved the game, which is a point of pride for me).
+							However, the concept might be something I revisit in the (far) future.
+							</p>
+						</div>
+					</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default col-xs-12">
 					<div role="tab"id="heading-xs-3">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-3"aria-expanded="false"aria-controls="collapse-xs-3"class="portfolio-box">
-							<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-3"aria-expanded="false"aria-controls="collapse-xs-3"class="portfolio-box">
+							<img src="img/portfolio/web2014_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										Website
@@ -180,20 +270,47 @@
 										ePortfolio 2014
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
-					<div id="collapse-xs-3"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-3">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+					<div id="collapse-xs-3"class="collapse-xs panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-3">
+						<div id="portfolio-content-xs-3" class="portfolio-content-xs panel-body">
+							<div style="text-align: center;">
+							<h2>ePortfolio 2014</h2>
+							<h4>September 2014</h4>
+							<hr class="primary">
+							<div id="eport-xs-snap-container">
+								<div id="eport-xs-snap">
+									<img class="image-responsive image-border" src="img/portfolio/web_snap_lg_1.png" style="margin-bottom: 15px;">
+									<img class="image-responsive image-border" src="img/portfolio/web_snap_lg_2.png">
+								</div>
+							</div>
+								<a target="_blank" href="http://brucezheng.com/index.html">Website</a>
+							<hr class="primary">
+								<div class="col-xs-12">
+									<p>
+									The old version of this website. 
+									It's very basic, and is based off of the <a target="_blank" href="http://www.subcide.com/articles/creating-a-css-layout-from-scratch/">following HTML/CSS tutorial</a>.
+									My motivation for making the website was in order to fulfil the requirements for Texas A&M University Honors (distinct from departmental honors programs), which require you to make an ePortfolio with an assortment of requirements.
+									I found making a website from a template to be a pretty boring and unengaging task, so I gave myself the extra challenge of coding my own website 'from scratch' in order to motivate myself more.
+									That way I could learn about something I was interested in while doing something I was very uninterested in.
+									</p>
+									<p>
+									The first website I ever made was back in 2007 (seventh grade for me), but I hadn't done any web development since.
+									I'd always been partially interested in web development, but the overwhelming amount of libraries and technologies used was intimidating to me.
+									I'm glad to have made this (2014) website.
+									Even though it probably didn't impress anyone, it did make me more comfortable in learning more about web technologies.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default col-xs-12">
 					<div role="tab"id="heading-xs-4">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-4"aria-expanded="false"aria-controls="collapse-xs-4"class="portfolio-box">
-							<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-4"aria-expanded="false"aria-controls="collapse-xs-4"class="portfolio-box">
+							<img src="img/portfolio/sam_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										Research
@@ -202,20 +319,48 @@
 										Numerical Monoids
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
 					<div id="collapse-xs-4"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-4">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+						<div id="portfolio-content-xs-4" class="portfolio-content-xs panel-body">
+						<div style="text-align: center;">
+						<h2>Numerical Monoids</h2>
+						<h4>July 2014</h4>
+						<hr class="primary">
+							<a target="_blank" href="http://brucezheng.com/index.html">JMM Slides</a> &bull;
+							<a target="_blank" href="http://brucezheng.com/index.html">Report</a>
+						<hr class="primary">
+							<div class="col-xs-12">
+								<p>
+								I participated in an REU at Sam Houston State during June and July of 2014. 
+								An REU (Research Experience for Undergraduates) is a summer program held by a university or other academic institution that is intended to introduce research to undergraduates.
+								This is important for Mathematics majors, because most math courses don't represent math research very well at all.
+								REUs are funded by the NSF and each REU participant is provided a pretty generous stipend.
+								Most REUs are pretty small; mine was on the larger side with about 20 students.
+								</p>
+								<p>
+								During the REU I was introduced to a topic area that was friendly to undergraduates (most research areas require years of learning to get to point of being able to contribute new results; this is also known as 'graduate school'),
+								given an open (i.e. unsolved) problem to work on, and turned loose for two months.
+								I checked in with my advisor (a professor at Sam Houston State University) every day, but for the most part I did not get much guidance.
+								This was both good, in that I was forced to be independent and persistent, and bad, in that it would be frustrating when I got stuck and did not get much help.
+								</p>
+								<p>
+								The final result of the program was a fourteen page paper.
+								I also produced a presentation that was shown at the Joint Mathematics Meetings the following January.
+								Unfortunately the topic area (numerical monoids) does not provide very many opportunities for graphics, nor is it easy to explain what my problem was.
+								I don't suspect many readers of this will be interested in learning about the problem, but if you are mathematically literate, feel free to send me an email and I'd love to talk about it (although at this point it is surprising how much of my own research I've forgotten).
+								</p>
+							</div>
+						</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default col-xs-12">
 					<div role="tab"id="heading-xs-5">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-5"aria-expanded="false"aria-controls="collapse-xs-5"class="portfolio-box">
-							<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-5" aria-expanded="false"aria-controls="collapse-xs-5"class="portfolio-box">
+							<img src="img/portfolio/ray_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										Computer Graphics
@@ -224,20 +369,68 @@
 										Raytracer
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
-					<div id="collapse-xs-5"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-5">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+					<div id="collapse-xs-5"class="collapse-xs panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-5">
+						<div id="portfolio-content-xs-5" class="bg-dark portfolio-content-xs panel-body">
+					<div style="text-align: center;">
+					<h2>Raytracer</h2>
+					<h4>May 2014</h4>
+					<hr class="primary">
+					<div id="eport-xs-snap-container">
+						<div id="eport-xs-snap">
+							<img class="image-border image-responsive" src="img/portfolio/ray_snap_lg_1.png" style="margin-bottom: 15px;">
+							<img class="image-border image-responsive" src="img/portfolio/ray_snap_lg_2.png">
+						</div>
+					</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Executable</a> <!--&bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Github</a-->
+					<hr class="primary">
+						<div class="col-xs-12">
+							<p>
+							A Raytracer is a method of rendering three dimensional objects.
+							It does this by shooting a ray for every pixel of the image, which is supposed to simulate light particles entering the point of view from that direction.
+							This is kind of the opposite of what traditional renderers do, which is determine what polygons are on the screen and then paint them onto pixels.
+							The advantage of raytracers is that they much better handle things such as reflection and refraction, since these are effects that bend or redirect light rays.
+							Raytracers can generate some very photorealistic results:
+							</p>								
+							<div style="width:700px;" class="scale-ray-container image-center">
+							<img class="scale-ray-img image-responsive" style="width:700px" src="http://i.imgur.com/Q3ubkdD.png	">
+							Image Credit: Gilles Tran
+							</div>
+							<p>
+							My raytracer was mostly made from scratch;
+							I used OpenGL, but only to draw individual pixels onto the screen.
+							There were three major components to the raytracer.
+							The first thing we had to do was represent a ray, and shoot out rays for every pixel of our display port.
+							The second task was building a library for representing shapes; we only really had to implement spheres and planes, as well as the stretching of those objects.
+							In particular, we needed to encode the material (i.e. color behavior) of the object, as well as be able to get the intersection of any ray with that object, as well as the normal vector of that intersection.
+							The third and final thing to do was to generate lighting data for every intersection. 
+							We had to shoot additional rays to see if the intersection point was visible from any lights, and possibly shoot more rays for light reflection or refraction.
+							</p>
+							<p>
+							This program was the final project of my Computer Graphics class.
+							In the class, we learned many different graphical algorithms; there were about six different two week projects.
+							Some of the other projects included polygon clipping and fractal generation.
+							Most of the class focused on 2D rendering, but we started to dip our toes into 3D stuff near the end of the semester.
+							Unfortunately we never really pushed our technologies to the point where do anything real time or interactive, but that is something I would like to learn about in the future.
+							</p>
+							<p>
+							The archive contains two files: an executable, and a dll fille named glut32, 
+							which is just a library file needed to run the program.
+							When using the executable, you can press the number keys 1 through 4 to get different scenes.
+							</p>
+						</div>
+					</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default col-xs-12">
 					<div role="tab"id="heading-xs-6">
-						<a role="button"data-toggle="collapse"data-parent="#accordion-xs"href="#collapse-xs-6"aria-expanded="false"aria-controls="collapse-xs-6"class="portfolio-box">
-							<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
-							<div class="portfolio-box-caption">
+						<a role="button"data-toggle="collapse" href="#collapse-xs-6"aria-expanded="false"aria-controls="collapse-xs-6"class="portfolio-box">
+							<img src="img/portfolio/cpu_short.png"class="porfolio-img-xs img-responsive">
+							<!--div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">
 										Computer Organization
@@ -246,12 +439,40 @@
 										Basic CPU
 									</div>
 								</div>
-							</div>
+							</div-->
 						</a>
 					</div>
-					<div id="collapse-xs-6"class="panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-6">
-						<div class="panel-body">
-							<p> blah blah blah </p>
+					<div id="collapse-xs-6"class="collapse-xs panel-collapse collapse"role="tabpanel"aria-labelledby="heading-xs-6">
+						<div id="portfolio-content-xs-6" class="portfolio-content-xs panel-body">
+						<div style="text-align: center;">
+						<h2>Basic CPU</h2>
+						<h4>May 2014</h4>
+						<hr class="primary">
+						<div id="eport-xs-snap-container">
+							<div id="eport-xs-snap">
+								<img class="image-border image-responsive" src="img/portfolio/cpu_snap_lg_1.png" style="margin-bottom: 10px;">
+								<img class="image-border image-responsive" src="img/portfolio/cpu_snap_lg_2.png">
+							</div>
+						</div>
+						<a target="_blank" href="">Zip Archive</a>
+						<hr class="primary">	
+							<div class="col-xs-12">
+								<p>
+								For the final project of my computer organization class, I had to design and implement a basic 4 function CPU.
+								The designs of CPUs was the culmination of our curriculum: 
+								we began by learning about logic gates and worked our way through more and more complicated circuits.
+								</p>
+								<p>
+								Originally we were going to implement a processor that could run x86, but due to time constraints the project was simplified to something that could add two small vectors of numbers.
+								It was still a great deal of work, and in some ways forced us to become more intimately familiar with CPU design; instead of being able to copy x86, we had to come up with our own assembly language.
+								We implemented the CPU in a circuit simulator called <a target="_blank" href="http://www.cburch.com/logisim/">Logisim</a>.
+								</p>
+								<p>
+								This was a team project; my role in the project was to come up with the high level design of the circuit, as well as the commands and structure of the assembly language.
+								The rest of the team made the real (virtual) circuit.
+								</p>
+							</div>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -262,7 +483,7 @@
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse"data-target="#collapse-sm-1-2" target-content="#portfolio-content-sm-1">
 						<img src="img/portfolio/arcs.png"class="img-responsive">
-						<div class="portfolio-box-caption">
+						<!--div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
 								Web App
@@ -271,40 +492,122 @@
 								Arcs
 							</div>
 						</div>
-						</div>
+						</div-->
 					</button>
 					
 				</div>
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-sm-1-2" target-content="#portfolio-content-sm-2">
-						<img src="img/portfolio/ray.png"class="img-responsive">
+						<img src="img/portfolio/fire.png"class="img-responsive">
 						<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								GameJam
+								Game
 							</div>
 							<div class="project-name">
-								Ray Tracer
+								Firebot
 							</div>
 						</div>
 						</div>
 					</button>
 				</div>
-				</div><div id="collapse-sm-1-2" class="col-sm-12 collapse-sm panel-collapse collapse" aria-expanded="false">
+				</div>
+				<div id="collapse-sm-1-2" class="col-sm-12 collapse-sm panel-collapse collapse" aria-expanded="false">
 					<div id="portfolio-content-sm-1" class="panel-body portfolio-content-sm" visible="false">
-						<div style="height: 700px; width: 100%; overflow:hidden; ">
-						<div id="arcs-sm-place" style="width:600px; height:700px; margin:auto;background-color:gray;"></div>
-						<embed id="arcs-sm-app" style="margin:auto; width:100%; height:710px; overflow: hidden;" src="http://brucezheng.com/arcs_sm.html"></embed>
+					<div style="text-align: center;">
+					<h2>Arcs</h2>
+					<h4>December 2014</h4>
+					<hr class="primary">
+					<div id="arcs-sm-snap-container">
+						<div id="arcs-sm-place">
+							<img class="image-blur" src="img/portfolio/arcs_sm_play.png" width="657" height="345">
+							<button id="arcs-sm-playbutton">
+							<div class="glyphicon glyphicon-play"></div>
+							</button>
+						</button>
+						</div>
+						<embed id="arcs-sm-app" src="http://brucezheng.com/arcs_sm.html"></embed>						
+					</div>
+					<hr class="primary">
+					<div class="col-sm-10 col-sm-offset-1">
+						<p>
+						<b>Arcs</b> is a web application which demonstrates how shortest distance paths on the earth appear 'curved' on most rectangular maps.
+						<b>Arcs</b> was built using a free 3d Javscript library called <a href="http://www.kevs3d.co.uk/dev/phoria/">Phoria</a> which itself uses HTML5's canvas library.
+						I had to write most of the logic of displaying paths and calculating their projections.
+						I also implemented mobile event triggers, since Phoria's mouse handling does not include this.
+						</p>
+						<p>
+						I thought of this project following a discussion I had with my roommate and his girlfriend.
+						She had recently got back to Texas following a six month mission trip in India.
+						We talked about how her flight back took her much farther north than we would have expected, because it appeared as a curve on the map.
+						</p>
+						<p>
+						I realized this behavior of maps was related to the natural distortions of map projections.
+						The earth, of course, is not flat, which means that we have to make some sacrifices with geometric accuracy when we project the earth's surface onto a flat map. 
+						The <a href="https://en.wikipedia.org/wiki/Mercator_projection">Mercator Projection</a>, for example, greatly exaggerates the sizes of areas near the north and south pole, causing Greenland to look much larger than
+						it actually is:
+						</p>
+						<div style="width:640px;" class="scale-proj-container image-center">
+						<img style="width:640px" class="scale-proj-img img-responsive" src="http://i.imgur.com/c1x61Tg.png">
+						Image Credit: Pratham
+						</div>
+						<p>
+						Other kinds of projections do preserve relative area, but at the cost of distorting angles. 
+						It is a well known mathematical result that it is impossible for a map projection to both be conformal (angle-preserving) and area-preserving.
+						A shortest path between two points on a surface is called a Geodesic.
+						On a plane, all Geodesics are line segments, but on a sphere, it is curved.
+						Similarly, when Geodesics are projected, they also tend to appear curved.
+						There are some projections where Geodesics do appear as line segments, which are called <a href="https://en.wikipedia.org/wiki/Gnomonic_projection">Gnomic Projections</a>.
+						Surprisingly, a Gnomonic Projection is actually not conformal, which is a misconception I had.
+						</p>
+					</div>
+					</div>
+						
+						
+					</div>
+					<div id="portfolio-content-sm-2" class="panel-body portfolio-content-sm bg-dark" visible="false">
+						<div style="text-align: center;">
+						<h2>Firebot</h2>
+						<h4>November 2014</h4>
+						<hr class="light">
+						<div id="eport-sm-snap-container">
+							<div id="eport-sm-snap">
+								<img class="image-border" src="img/portfolio/fire_snap_sm.png">
+							</div>
+						</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Executable</a> &bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Github</a>
+						<hr class="light">
+						<div class="col-sm-10 col-sm-offset-1">
+							<p>
+							<b>Firebot</b> is a game I wrote with my friend Andy Tran during the <a href="http://live.viz.tamu.edu/newsy/2014/10/26/live-lab-game-jam/">2014 Live Lab GameJam</a> at Texas A&M University.
+							The objective of the game is to put out fires and fight fire themed enemies.
+							</p>
+							<p>
+							The main character is a floating robot that is armed with a hose and a gun.
+							Both weapons produce a lot of recoil, which can be used in some platforming challenges.
+							One gameplay mechanic I wanted to include was to have enemies be invulnerable when they are on fire; the player would have to extinguish them before shooting them.
+							Unfortunately we were only able to get static fire and one enemy type into the game before the GameJam ended.
+							</p>
+							<p>
+							We used Unity as our game development environment.
+							Before writing this game I had zero experience with Unity or game development platforms, or even C#, which is what Unity uses.
+							A lot of the code for this project was re-purposed from Unity's tutorial platformer game, although very little original code remained by the end.
+							Art assets were lazily made in MS Paint; originally the Firebot was meant to have legs.
+							</p>
+							<p>
+							I don't have any plans on continuing this particular project.
+							I didn't really like how the movement and the 'feel' of the game turned out; playtesters were often frustrated with how difficult basic platforming was (although the playtesters' children loved the game, which is a point of pride for me).
+							However, the concept might be something I revisit in the (far) future.
+							</p>
 						</div>
 					</div>
-					<div id="portfolio-content-sm-2" class="panel-body portfolio-content-sm" visible="false" style="background-color:red;">
-						Content 2
-					</div>
+				</div>
 				</div>
 				<div class="box-group">
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-sm-3-4" target-content="#portfolio-content-sm-3">
-						<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
+						<img src="img/portfolio/web2014.png"class="porfolio-img-xs img-responsive">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
@@ -319,7 +622,7 @@
 				</div>
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-sm-3-4" target-content="#portfolio-content-sm-4">
-						<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
+						<img src="img/portfolio/sam.png"class="porfolio-img-xs img-responsive">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
@@ -334,21 +637,76 @@
 				</div>
 				<div id="collapse-sm-3-4" class="col-sm-12 collapse-sm panel-collapse collapse" aria-expanded="false">
 					<div id="portfolio-content-sm-3" class="panel-body portfolio-content-sm" visible="false">
-						Content 3
+						<div style="text-align: center;">
+						<h2>ePortfolio 2014</h2>
+						<h4>September 2014</h4>
+						<hr class="primary">
+						<div id="eport-sm-snap-container">
+							<div id="eport-sm-snap">
+								<img class="image-border" src="img/portfolio/web_snap_lg_1.png" style="margin-bottom: 15px;">
+								<img class="image-border" src="img/portfolio/web_snap_lg_2.png">
+							</div>
+						</div>
+							<a target="_blank" href="http://brucezheng.com/index.html">Website</a>
+						<hr class="primary">
+							<div class="col-sm-10 col-sm-offset-1">
+								<p>
+								The old version of this website. 
+								It's very basic, and is based off of the <a target="_blank" href="http://www.subcide.com/articles/creating-a-css-layout-from-scratch/">following HTML/CSS tutorial</a>.
+								My motivation for making the website was in order to fulfil the requirements for Texas A&M University Honors (distinct from departmental honors programs), which require you to make an ePortfolio with an assortment of requirements.
+								I found making a website from a template to be a pretty boring and unengaging task, so I gave myself the extra challenge of coding my own website 'from scratch' in order to motivate myself more.
+								That way I could learn about something I was interested in while doing something I was very uninterested in.
+								</p>
+								<p>
+								The first website I ever made was back in 2007 (seventh grade for me), but I hadn't done any web development since.
+								I'd always been partially interested in web development, but the overwhelming amount of libraries and technologies used was intimidating to me.
+								I'm glad to have made this (2014) website.
+								Even though it probably didn't impress anyone, it did make me more comfortable in learning more about web technologies.
+								</p>
+							</div>
+						</div>
 					</div>
 					<div id="portfolio-content-sm-4" class="panel-body portfolio-content-sm" visible="false">
-						Content 4
+						<div style="text-align: center;">
+						<h2>Numerical Monoids</h2>
+						<h4>July 2014</h4>
+						<hr class="primary">
+							<a target="_blank" href="http://brucezheng.com/index.html">JMM Slides</a> &bull;
+							<a target="_blank" href="http://brucezheng.com/index.html">Report</a>
+						<hr class="primary">
+							<div class="col-sm-10 col-sm-offset-1">
+								<p>
+								I participated in an REU at Sam Houston State during June and July of 2014. 
+								An REU (Research Experience for Undergraduates) is a summer program held by a university or other academic institution that is intended to introduce research to undergraduates.
+								This is important for Mathematics majors, because most math courses don't represent math research very well at all.
+								REUs are funded by the NSF and each REU participant is provided a pretty generous stipend.
+								Most REUs are pretty small; mine was on the larger side with about 20 students.
+								</p>
+								<p>
+								During the REU I was introduced to a topic area that was friendly to undergraduates (most research areas require years of learning to get to point of being able to contribute new results; this is also known as 'graduate school'),
+								given an open (i.e. unsolved) problem to work on, and turned loose for two months.
+								I checked in with my advisor (a professor at Sam Houston State University) every day, but for the most part I did not get much guidance.
+								This was both good, in that I was forced to be independent and persistent, and bad, in that it would be frustrating when I got stuck and did not get much help.
+								</p>
+								<p>
+								The final result of the program was a fourteen page paper.
+								I also produced a presentation that was shown at the Joint Mathematics Meetings the following January.
+								Unfortunately the topic area (numerical monoids) does not provide very many opportunities for graphics, nor is it easy to explain what my problem was.
+								I don't suspect many readers of this will be interested in learning about the problem, but if you are mathematically literate, feel free to send me an email and I'd love to talk about it (although at this point it is surprising how much of my own research I've forgotten).
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				</div>
 				<div class="box-group">
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-sm-5-6" target-content="#portfolio-content-sm-5">
-						<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
+						<img src="img/portfolio/ray.png"class="porfolio-img-xs img-responsive">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
-									Computer Graphics
+									Graphics
 								</div>
 								<div class="project-name">
 									Raytracer
@@ -359,11 +717,11 @@
 				</div>
 				<div class="col-sm-6 no-padding">
 					<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-sm-5-6" target-content="#portfolio-content-sm-6">
-						<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
+						<img src="img/portfolio/cpu.png"class="porfolio-img-xs img-responsive">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
-									Computer Organization
+									Circuit Design
 								</div>
 								<div class="project-name">
 									Basic CPU
@@ -373,11 +731,87 @@
 					</button>
 				</div>
 				<div id="collapse-sm-5-6" class="col-sm-12 collapse-sm panel-collapse collapse" aria-expanded="false">
-					<div id="portfolio-content-sm-5" class="panel-body portfolio-content-sm" visible="false">
-						Content 5
+					<div id="portfolio-content-sm-5" class="bg-dark panel-body portfolio-content-sm" visible="false">
+					<div style="text-align: center;">
+					<h2>Raytracer</h2>
+					<h4>May 2014</h4>
+					<hr class="primary">
+					<div id="eport-sm-snap-container">
+						<div id="eport-sm-snap">
+							<img class="image-border" src="img/portfolio/ray_snap_lg_1.png" style="margin-bottom: 15px;">
+							<img class="image-border" src="img/portfolio/ray_snap_lg_2.png">
+						</div>
+					</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Executable</a> <!--&bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Github</a-->
+					<hr class="primary">
+						<div class="col-sm-10 col-sm-offset-1">
+							<p>
+							A Raytracer is a method of rendering three dimensional objects.
+							It does this by shooting a ray for every pixel of the image, which is supposed to simulate light particles entering the point of view from that direction.
+							This is kind of the opposite of what traditional renderers do, which is determine what polygons are on the screen and then paint them onto pixels.
+							The advantage of raytracers is that they much better handle things such as reflection and refraction, since these are effects that bend or redirect light rays.
+							Raytracers can generate some very photorealistic results:
+							</p>								
+							<div style="width:700px;" class="scale-ray-container image-center">
+							<img class="scale-ray-img image-responsive" style="width:700px" src="http://i.imgur.com/Q3ubkdD.png	">
+							Image Credit: Gilles Tran
+							</div>
+							<p>
+							My raytracer was mostly made from scratch;
+							I used OpenGL, but only to draw individual pixels onto the screen.
+							There were three major components to the raytracer.
+							The first thing we had to do was represent a ray, and shoot out rays for every pixel of our display port.
+							The second task was building a library for representing shapes; we only really had to implement spheres and planes, as well as the stretching of those objects.
+							In particular, we needed to encode the material (i.e. color behavior) of the object, as well as be able to get the intersection of any ray with that object, as well as the normal vector of that intersection.
+							The third and final thing to do was to generate lighting data for every intersection. 
+							We had to shoot additional rays to see if the intersection point was visible from any lights, and possibly shoot more rays for light reflection or refraction.
+							</p>
+							<p>
+							This program was the final project of my Computer Graphics class.
+							In the class, we learned many different graphical algorithms; there were about six different two week projects.
+							Some of the other projects included polygon clipping and fractal generation.
+							Most of the class focused on 2D rendering, but we started to dip our toes into 3D stuff near the end of the semester.
+							Unfortunately we never really pushed our technologies to the point where do anything real time or interactive, but that is something I would like to learn about in the future.
+							</p>
+							<p>
+							The archive contains two files: an executable, and a dll fille named glut32, 
+							which is just a library file needed to run the program.
+							When using the executable, you can press the number keys 1 through 4 to get different scenes.
+							</p>
+						</div>
+					</div>
 					</div>
 					<div id="portfolio-content-sm-6" class="panel-body portfolio-content-sm" visible="false">
-						Content 6
+						<div style="text-align: center;">
+						<h2>Basic CPU</h2>
+						<h4>May 2014</h4>
+						<hr class="primary">
+						<div id="eport-sm-snap-container">
+							<div id="eport-sm-snap">
+								<img class="image-border" src="img/portfolio/cpu_snap_lg_1.png" style="margin-bottom: 15px;">
+								<img class="image-border" src="img/portfolio/cpu_snap_lg_2.png">
+							</div>
+						</div>
+						<a target="_blank" href="">Zip Archive</a>
+						<hr class="primary">	
+							<div class="col-sm-10 col-sm-offset-1">
+								<p>
+								For the final project of my computer organization class, I had to design and implement a basic 4 function CPU.
+								The designs of CPUs was the culmination of our curriculum: 
+								we began by learning about logic gates and worked our way through more and more complicated circuits.
+								</p>
+								<p>
+								Originally we were going to implement a processor that could run x86, but due to time constraints the project was simplified to something that could add two small vectors of numbers.
+								It was still a great deal of work, and in some ways forced us to become more intimately familiar with CPU design; instead of being able to copy x86, we had to come up with our own assembly language.
+								We implemented the CPU in a circuit simulator called <a target="_blank" href="http://www.cburch.com/logisim/">Logisim</a>.
+								</p>
+								<p>
+								This was a team project; my role in the project was to come up with the high level design of the circuit, as well as the commands and structure of the assembly language.
+								The rest of the team made the real (virtual) circuit.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -400,11 +834,11 @@
 			</div>
 			<div class="col-lg-4">
 				<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-lg-1-3" target-content="#portfolio-content-lg-2">
-				<img src="img/portfolio/ray.png" class="img-responsive" >
+				<img src="img/portfolio/fire.png" class="img-responsive" >
 				<div class="portfolio-box-caption">
 					<div class="portfolio-box-caption-content">
 						<div class="project-category text-faded">
-							GameJam
+							Game
 						</div>
 						<div class="project-name">
 							Firebot
@@ -415,7 +849,7 @@
 			</div>
 			<div class="col-lg-4">
 				<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-lg-1-3" target-content="#portfolio-content-lg-3">
-				<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
+				<img src="img/portfolio/web2014.png"class="porfolio-img-xs img-responsive">
 				<div class="portfolio-box-caption">
 				<div class="portfolio-box-caption-content">
 					<div class="project-category text-faded">
@@ -430,21 +864,128 @@
 			</div>
 			<div id="collapse-lg-1-3" class="col-lg-12 collapse-lg panel-collapse collapse" aria-expanded="false">
 				<div id="portfolio-content-lg-1" class="panel-body portfolio-content-lg" visible="false">
-					<div style="height: 500px; width: 100%; overflow:hidden; ">
-					<div id="arcs-lg-place" style="width:1000px; height:500px; margin:auto;background-color:gray;"></div>
-					<embed id="arcs-lg-app" style="margin:auto; width:100%; height:520px; overflow: hidden;" src="F:/GitHub/arcs/arcs_lg.html"></embed>
+				<div style="text-align: center;">
+					<h2>Arcs</h2>
+					<h4>December 2014</h4>
+					<hr class="primary">
+					<div id="arcs-lg-snap-container">
+					<div id="arcs-lg-place">
+						<img class="image-blur" src="img/portfolio/arcs_lg_play.png" width="1000" height="500">
+						<button id="arcs-lg-playbutton">
+							<div class="glyphicon glyphicon-play"></div>
+						</button>
+					</div>
+					<embed id="arcs-lg-app" style="margin:auto; width:100%; height:550px; overflow: hidden;" src="http://brucezheng.com/arcs_lg.html"></embed>
+					</div>
+					<a href="https://github.com/brucezheng/website_2014">Github</a>
+					<hr class="primary">
+					</div>
+					<div class="col-lg-8 col-lg-offset-2">
+						<p>
+						<b>Arcs</b> is a web application which demonstrates how shortest distance paths on the earth appear 'curved' on most rectangular maps.
+						<b>Arcs</b> was built using a free 3d Javscript library called <a href="http://www.kevs3d.co.uk/dev/phoria/">Phoria</a> which itself uses HTML5's canvas library.
+						I had to write most of the logic of displaying paths and calculating their projections.
+						I also implemented mobile event triggers, since Phoria's mouse handling does not include this.
+						</p>
+						<p>
+						I thought of this project following a discussion I had with my roommate and his girlfriend.
+						She had recently got back to Texas following a six month mission trip in India.
+						We talked about how her flight back took her much farther north than we would have expected, because it appeared as a curve on the map.
+						</p>
+						<p>
+						I realized this behavior of maps was related to the natural distortions of map projections.
+						The earth, of course, is not flat, which means that we have to make some sacrifices with geometric accuracy when we project the earth's surface onto a flat map. 
+						The <a href="https://en.wikipedia.org/wiki/Mercator_projection">Mercator Projection</a>, for example, greatly exaggerates the sizes of areas near the north and south pole, causing Greenland to look much larger than
+						it actually is:
+						</p>
+						<div style="width:640px;" class="image-center">
+						<img src="http://i.imgur.com/c1x61Tg.png">
+						Image Credit: Pratham
+						</div>
+						<p>
+						Other kinds of projections do preserve relative area, but at the cost of distorting angles. 
+						It is a well known mathematical result that it is impossible for a map projection to both be conformal (angle-preserving) and area-preserving.
+						A shortest path between two points on a surface is called a Geodesic.
+						On a plane, all Geodesics are line segments, but on a sphere, it is curved.
+						Similarly, when Geodesics are projected, they also tend to appear curved.
+						There are some projections where Geodesics do appear as line segments, which are called <a href="https://en.wikipedia.org/wiki/Gnomonic_projection">Gnomic Projections</a>.
+						Surprisingly, a Gnomonic Projection is actually not conformal, which is a misconception I had.
+						</p>
 					</div>
 				</div>
-				<div id="portfolio-content-lg-2" class="panel-body portfolio-content-lg" visible="false">
-					Content 2
+				<div id="portfolio-content-lg-2" class="panel-body portfolio-content-lg  bg-dark" visible="false">
+					<div style="text-align: center;">
+						<h2>Firebot</h2>
+						<h4>November 2014</h4>
+						<hr class="light">
+						<div id="fire-lg-snap-container">
+							<div id="fire-lg-snap">
+								<img class="image-border" src="img/portfolio/fire_snap_lg.png">
+							</div>
+						</div>
+						<a href="http://brucezheng.com/index.html">Executable</a> &bull;
+						<a href="http://brucezheng.com/index.html">Github</a>
+						<hr class="light">
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>
+							<b>Firebot</b> is a game I wrote with my friend Andy Tran during the <a href="http://live.viz.tamu.edu/newsy/2014/10/26/live-lab-game-jam/">2014 Live Lab GameJam</a> at Texas A&M University.
+							The objective of the game is to put out fires and fight fire themed enemies.
+							</p>
+							<p>
+							The main character is a floating robot that is armed with a hose and a gun.
+							Both weapons produce a lot of recoil, which can be used in some platforming challenges.
+							One gameplay mechanic I wanted to include was to have enemies be invulnerable when they are on fire; the player would have to extinguish them before shooting them.
+							Unfortunately we were only able to get static fire and one enemy type into the game before the GameJam ended.
+							</p>
+							<p>
+							We used Unity as our game development environment.
+							Before writing this game I had zero experience with Unity or game development platforms, or even C#, which is what Unity uses.
+							A lot of the code for this project was re-purposed from Unity's tutorial platformer game, although very little original code remained by the end.
+							Art assets were lazily made in MS Paint; originally the Firebot was meant to have legs.
+							</p>
+							<p>
+							I don't have any plans on continuing this particular project.
+							I didn't really like how the movement and the 'feel' of the game turned out; playtesters were often frustrated with how difficult basic platforming was (although the playtesters' children loved the game, which is a point of pride for me).
+							However, the concept might be something I revisit in the (far) future.
+							</p>
+						</div>
+					</div>
+					
 				</div>
 				<div id="portfolio-content-lg-3" class="panel-body portfolio-content-lg" visible="false">
-					Content 3
+					<div style="text-align: center;">
+					<h2>ePortfolio 2014</h2>
+					<h4>September 2014</h4>
+					<hr class="primary">
+					<div id="eport-lg-snap-container">
+						<div id="eport-lg-snap">
+							<img class="image-border" src="img/portfolio/web_snap_lg_1.png" style="margin-right: 10px;">
+							<img class="image-border" src="img/portfolio/web_snap_lg_2.png">
+						</div>
+					</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Website</a>
+					<hr class="primary">
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>
+							The old version of this website. 
+							It's very basic, and is based off of the <a target="_blank" href="http://www.subcide.com/articles/creating-a-css-layout-from-scratch/">following HTML/CSS tutorial</a>.
+							My motivation for making the website was in order to fulfil the requirements for Texas A&M University Honors (distinct from departmental honors programs), which require you to make an ePortfolio with an assortment of requirements.
+							I found making a website from a template to be a pretty boring and unengaging task, so I gave myself the extra challenge of coding my own website 'from scratch' in order to motivate myself more.
+							That way I could learn about something I was interested in while doing something I was very uninterested in.
+							</p>
+							<p>
+							The first website I ever made was back in 2007 (seventh grade for me), but I hadn't done any web development since.
+							I'd always been partially interested in web development, but the overwhelming amount of libraries and technologies used was intimidating to me.
+							I'm glad to have made this (2014) website.
+							Even though it probably didn't impress anyone, it did make me more comfortable in learning more about web technologies.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-lg-4-6" target-content="#portfolio-content-lg-4">
-				<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
+				<img src="img/portfolio/sam.png"class="porfolio-img-xs img-responsive">
 				<div class="portfolio-box-caption">
 				<div class="portfolio-box-caption-content">
 					<div class="project-category text-faded">
@@ -459,11 +1000,11 @@
 			</div>
 			<div class="col-lg-4">
 				<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-lg-4-6" target-content="#portfolio-content-lg-5">
-				<img src="img/portfolio/place.png"class="porfolio-img-xs img-responsive">
+				<img src="img/portfolio/ray.png"class="porfolio-img-xs img-responsive">
 				<div class="portfolio-box-caption">
 				<div class="portfolio-box-caption-content">
 					<div class="project-category text-faded">
-						Computer Graphics
+						Graphics
 					</div>
 					<div class="project-name">
 						Raytracer
@@ -474,11 +1015,11 @@
 			</div>
 			<div class="col-lg-4">
 				<button class="portfolio-button portfolio-box" data-toggle="collapse" data-target="#collapse-lg-4-6" target-content="#portfolio-content-lg-6">
-				<img src="img/portfolio/place2.png"class="porfolio-img-xs img-responsive">
+				<img src="img/portfolio/cpu.png"class="porfolio-img-xs img-responsive">
 				<div class="portfolio-box-caption">
 				<div class="portfolio-box-caption-content">
 					<div class="project-category text-faded">
-						Computer Organization
+						Circuit Design
 					</div>
 					<div class="project-name">
 						Basic CPU
@@ -489,13 +1030,117 @@
 			</div>
 			<div id="collapse-lg-4-6" class="col-lg-12 collapse-lg panel-collapse collapse" aria-expanded="false">
 				<div id="portfolio-content-lg-4" class="panel-body portfolio-content-lg" visible="false">
-					Content 4
+					<div style="text-align: center;">
+					<h2>Numerical Monoids</h2>
+					<h4>July 2014</h4>
+					<hr class="primary">
+						<a target="_blank" href="http://brucezheng.com/index.html">JMM Slides</a> &bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Report</a>
+					<hr class="primary">
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>
+							I participated in an REU at Sam Houston State during June and July of 2014. 
+							An REU (Research Experience for Undergraduates) is a summer program held by a university or other academic institution that is intended to introduce research to undergraduates.
+							This is important for Mathematics majors, because most math courses don't represent math research very well at all.
+							REUs are funded by the NSF and each REU participant is provided a pretty generous stipend.
+							Most REUs are pretty small; mine was on the larger side with about 20 students.
+							</p>
+							<p>
+							During the REU I was introduced to a topic area that was friendly to undergraduates (most research areas require years of learning to get to point of being able to contribute new results; this is also known as 'graduate school'),
+							given an open (i.e. unsolved) problem to work on, and turned loose for two months.
+							I checked in with my advisor (a professor at Sam Houston State University) every day, but for the most part I did not get much guidance.
+							This was both good, in that I was forced to be independent and persistent, and bad, in that it would be frustrating when I got stuck and did not get much help.
+							</p>
+							<p>
+							The final result of the program was a fourteen page paper.
+							I also produced a presentation that was shown at the Joint Mathematics Meetings the following January.
+							Unfortunately the topic area (numerical monoids) does not provide very many opportunities for graphics, nor is it easy to explain what my problem was.
+							I don't suspect many readers of this will be interested in learning about the problem, but if you are mathematically literate, feel free to send me an email and I'd love to talk about it (although at this point it is surprising how much of my own research I've forgotten).
+							</p>
+						</div>
+					</div>
 				</div>
-				<div id="portfolio-content-lg-5" class="panel-body portfolio-content-lg" visible="false">
-					Content 5
+				<div id="portfolio-content-lg-5" class="panel-body portfolio-content-lg bg-dark" visible="false">
+					<div style="text-align: center;">
+					<h2>Raytracer</h2>
+					<h4>May 2014</h4>
+					<hr class="primary">
+					<div id="eport-lg-snap-container">
+						<div id="eport-lg-snap">
+							<img class="image-border" src="img/portfolio/ray_snap_lg_1.png" style="margin-right: 10px;">
+							<img class="image-border" src="img/portfolio/ray_snap_lg_2.png">
+						</div>
+					</div>
+						<a target="_blank" href="http://brucezheng.com/index.html">Executable</a> <!--&bull;
+						<a target="_blank" href="http://brucezheng.com/index.html">Github</a-->
+					<hr class="primary">
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>
+							A Raytracer is a method of rendering three dimensional objects.
+							It does this by shooting a ray for every pixel of the image, which is supposed to simulate light particles entering the point of view from that direction.
+							This is kind of the opposite of what traditional renderers do, which is determine what polygons are on the screen and then paint them onto pixels.
+							The advantage of raytracers is that they much better handle things such as reflection and refraction, since these are effects that bend or redirect light rays.
+							Raytracers can generate some very photorealistic results:
+							</p>								
+							<div style="width:700px;" class="scale-ray-container image-center">
+							<img class="scale-ray-img image-responsive" style="width:700px" src="http://i.imgur.com/Q3ubkdD.png	">
+							Image Credit: Gilles Tran
+							</div>
+							<p>
+							My raytracer was mostly made from scratch;
+							I used OpenGL, but only to draw individual pixels onto the screen.
+							There were three major components to the raytracer.
+							The first thing we had to do was represent a ray, and shoot out rays for every pixel of our display port.
+							The second task was building a library for representing shapes; we only really had to implement spheres and planes, as well as the stretching of those objects.
+							In particular, we needed to encode the material (i.e. color behavior) of the object, as well as be able to get the intersection of any ray with that object, as well as the normal vector of that intersection.
+							The third and final thing to do was to generate lighting data for every intersection. 
+							We had to shoot additional rays to see if the intersection point was visible from any lights, and possibly shoot more rays for light reflection or refraction.
+							</p>
+							<p>
+							This program was the final project of my Computer Graphics class.
+							In the class, we learned many different graphical algorithms; there were about six different two week projects.
+							Some of the other projects included polygon clipping and fractal generation.
+							Most of the class focused on 2D rendering, but we started to dip our toes into 3D stuff near the end of the semester.
+							Unfortunately we never really pushed our technologies to the point where do anything real time or interactive, but that is something I would like to learn about in the future.
+							</p>
+							<p>
+							The archive contains two files: an executable, and a dll fille named glut32, 
+							which is just a library file needed to run the program.
+							When using the executable, you can press the number keys 1 through 4 to get different scenes.
+							</p>
+						</div>
+					</div>
 				</div>
 				<div id="portfolio-content-lg-6" class="panel-body portfolio-content-lg" visible="false">
-					Content 6
+					<div style="text-align: center;">
+					<h2>Basic CPU</h2>
+					<h4>May 2014</h4>
+					<hr class="primary">
+					<div id="eport-lg-snap-container">
+						<div id="eport-lg-snap">
+							<img class="image-border" src="img/portfolio/cpu_snap_lg_1.png" style="margin-right: 10px;">
+							<img class="image-border" src="img/portfolio/cpu_snap_lg_2.png">
+						</div>
+					</div>
+						<a target="_blank" href="">Zip Archive</a>
+					<hr class="primary">	
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>
+							For the final project of my computer organization class, I had to design and implement a basic 4 function CPU.
+							The designs of CPUs was the culmination of our curriculum: 
+							we began by learning about logic gates and worked our way through more and more complicated circuits.
+							</p>
+							<p>
+							Originally we were going to implement a processor that could run x86, but due to time constraints the project was simplified to something that could add two small vectors of numbers.
+							It was still a great deal of work, and in some ways forced us to become more intimately familiar with CPU design; instead of being able to copy x86, we had to come up with our own assembly language.
+							We implemented the CPU in a circuit simulator called <a target="_blank" href="http://www.cburch.com/logisim/">Logisim</a>.
+							</p>
+							<p>
+							This was a team project; my role in the project was to come up with the high level design of the circuit, as well as the commands and structure of the assembly language.
+							The rest of the team made the real (virtual) circuit.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
         </div>
@@ -525,28 +1170,42 @@
 
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner"role="listbox">
-				<div id="slide_0"class="item active">
+				<div id="slide_0"class="item ">
 					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
 						<h3>Freshman Year</h3>
+						<div class="hidden-lg picture-fill-h-outer col-md-12">
+						<div id="y1-h-pic" class="picture-fill-h-inner"></div>
+						</div>
+						<div class = "carousel-container col-lg-12">
 						<div class = "item-block col-lg-8">
 						<div class = "item-block text-left col-lg-12">
 							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							College is a clean slate for a lot of people; it definitely was for me.
+							My senior year of high school was not a pleasant experience;
+							I had a lot of issues with my family and with focusing on coursework.
+							My grades took a big hit, but luckily I was still able to get into Texas A&M.
+							</p>
+							<p>
+							Fortunately living away from home was a great influence;
+							the perception that I had to be fully responsible for my own performance was a great motivator.
+							I was someone who had the reputation of being a slacker in high school,
+							but my work ethic really took a 180 degree turn as soon as I started college.
+							</p>
+							<p>
+							I applied to the Chemical Engineering school but got into Applied Mathematics, which turned out to be a wonderful outcome.
+							I found out I really liked the advanced, proof-based math courses that were not taught in high school.
+							I also rediscovered my love for programming and was delighted to recognize the mathematical underpinnings of the field.
 							</p>
 						</div>
-						<div class="visible-xs-block visible-sm-block picture-fill col-sm-12"></div>
 						<div class = "item-block col-xs-6 text-left">
 							<div class="text-center">
 							<h4>Fall 2012</h4>
 							</div>
 							<li><b>CSCE 121H</b> Introduction to Program Design and Concepts</li>
 							<li><b>HIST 105</b> History of the United States to 1877 </li>
-							<li><b>MATH 220H</b> Foundations of Math</li>
+							<li><b>MATH 220H</b> Foundations of Mathematics</li>
 							<li><b>MATH 221</b> Calculus III</li>
-							<li><b>UGST 181</b> Arts and Crafts and Math</li>
+							<li><b>UGST 181</b> Arts and Crafts and Maths</li>
 						</div>
 						<div class = "item-block col-xs-6 text-left">
 							<div class="text-center">
@@ -560,22 +1219,32 @@
 							<li><b>UGST 285</b> The Development of the Detective in Mystery Fiction</li>
 						</div>
 						</div>
-						<div class="visible-lg-block visible-md-block  picture-fill col-lg-4"></div>
+						<div id="y1-v-pic" class="visible-lg-block picture-fill col-lg-4"></div>
+						</div>
 					</div>
 				</div>
 				<div id="slide_1"class="item">
 					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
 						<h3>Sophomore Year</h3>
+						<div class="hidden-lg picture-fill-h-outer col-md-12">
+						<div id="y2-h-pic" class="picture-fill-h-inner"></div>
+						</div>
+						<div class = "carousel-container col-lg-12">
 						<div class = "item-block col-lg-8">
 						<div class = "item-block text-left col-lg-12">
 							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							In my second year of college I continued to discover my passions for learning.
+							I also became a lot more confident in my ability to handle coursework.
+							I took a lot of classes sophomore year.
+							I survived, but wasn't as beneficial as I'd hoped it would be.
+							Courses are more about quality than quantity: although I could cram for six classes, 
+							I really didn't retain information from the classes I skimped the work on.
+							</p>
+							<p>
+							In the fall I decided to double major in Computer Science, and also began my job with the Math Department as a teaching assistant.
+							I also became more interested in academia as a career path and research, especially mathematics.
 							</p>
 						</div>
-						<div class="visible-xs-block visible-sm-block picture-fill col-sm-12"></div>
 						<div class = "item-block col-xs-6 text-left">
 							<div class="text-center">
 							<h4>Fall 2013</h4>
@@ -584,7 +1253,7 @@
 							<li><b>JAPN 101</b> Beginning Japanese I</li>
 							<li><b>MATH 409H</b> Advanced Calculus I</li>
 							<li><b>MATH 411</b> Mathematical Probability</li>
-							<li><b>MATH 415</b> Modern Algebra I</li>
+							<li><b>MATH 415H</b> Modern Algebra I</li>
 							<li><b>MATH 470</b> Communications and Cryptography</li>
 						</div>
 						<div class = "item-block col-xs-6 text-left">
@@ -599,28 +1268,61 @@
 							<li><b>MATH 485H</b> Modern Algebra II</li>
 						</div>
 						</div>
-						<div class="visible-lg-block visible-md-block  picture-fill col-lg-4"></div>
+						<div id="y2-v-pic" class="visible-lg-block picture-fill col-lg-4"></div>
+						</div>
 					</div>
 				</div>
 				<div id="slide_2"class="item">
-					<div class ="col-md-10 col-md-offset-1 text-center">
+					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
 						<h3>Sam Houston State REU</h3>
-
+						<div class="hidden-lg picture-fill-h-outer col-xs-12">
+						<div id="s2-h-pic" class="picture-fill-h-inner"></div>
+						</div>
+						<div class = "carousel-container col-lg-12">
+						<div id="s2-v-pic"  class="visible-lg-block picture-fill left col-md-6"></div>
+						<div class="item-pad">
+						<div id="s2-item" class = "item-block text-left col-lg-6">
+						<p>
+						Unsure of what I wanted to do in the summer, I applied for several summer research programs in the spring of 2014.
+						I ended up getting into an REU (Research Experience for Undergraduates) at Sam Houston State.
+						</p>
+						<p>
+						The program was challenging and exciting, but surprisingly relaxed.
+						In independent research, you are surrounded by people who have immense drive, 
+						but you don't really find as much of the traditional carrot-stick motivators in classwork 
+						(although being a professor may be different, with publications and whatnot).
+						This was refreshing to me and really suited my personality.
+						</p>
+						<p>
+						I ended up working on an algebra project that had to do with factorization in some special domains.
+						The results of the research can be found in <a class="page-scroll"href="#portfolio">my portfolio</a>.
+						</P>
+						</div>					
+						</div>				
+						</div>
 					</div>
 				</div>
 				<div id="slide_3"class="item">
 					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
 						<h3>Junior Year</h3>
+						<div class="hidden-lg picture-fill-h-outer col-xs-12">
+						<div id="y3-h-pic" class="picture-fill-h-inner"></div>
+						</div>
 						<div class = "item-block col-lg-8">
 						<div class = "item-block text-left col-lg-12">
 							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							In my third year of college I started to more heavily focus on my computer science classes.
+							This was not really a result of preference, but rather I realized that I needed to do this in order to fulfil my double major requirements.
+							</p>
+							<p>
+							In my fall semester I worked both as a peer teacher for the CSCE department and a teaching assistant for the math department.
+							It was great to be able to help lots of people with their classes, but ultimately it was too many hours, so I dropped my peer teaching job in the spring.
+							</p>
+							<p>
+							I flirted a bit with presenting research; I presented my REU project at the Joint Mathematics Meetings in San Antonio in January, 
+							and my project in Geometric Group Theory with Dr. Grigorchuk at the Undergraduate Geometry and Topography conference at Texas university during February.
 							</p>
 						</div>
-						<div class="visible-xs-block visible-sm-block picture-fill col-sm-12"></div>
 						<div class = "item-block col-xs-6 text-left">
 							<div class="text-center">
 							<h4>Fall 2014</h4>
@@ -639,27 +1341,78 @@
 							<li><b>CSCE 420</b> Artificial Intelligence</li>
 							<li><b>CSCE 627</b> Theory of Computability</li>
 							<li><b>JAPN 202</b> Intermediate Japanese II</li>
-							<li><b>MUSC 102</b> Complex Variables</li>
+							<li><b>MUSC 102</b> Introduction to Music Theory</li>
 						</div>
 						</div>
-						<div class="visible-lg-block visible-md-block  picture-fill col-lg-4"></div>
+						<div id="y3-v-pic" class="visible-lg-block  picture-fill col-lg-4"></div>
 					</div>
 				</div>
 				<div id="slide_4"class="item">
-					<div class ="text-center">
+					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
 						<h3>Charles Schwab Internship</h3>
+						<div class="hidden-lg picture-fill-h-outer col-xs-12">
+						<div id="s3-h-pic" class="picture-fill-h-inner"></div>
+						</div>
+						<div class = "carousel-container col-lg-12">
+						<div id="s3-v-pic" class="visible-lg-block picture-fill col-sm-6"></div>
+						<div class="item-pad">
+						<div class = "item-block text-left col-lg-6">
+						<p>
+						In the Summer of 2015, I participated in an internship at Charles Schwab.
+						This was a nine week program that lasted from June 15 to August 14, at the new Denver campus in Lone Tree.
+						</p>
+						<p>
+						Interns were recruited for many departments. 
+						I worked in the Integrated Data Warehouse (IDW),
+						whose main purpose is to consolidate data from other internal databases so that access and usage of that data is easy and convenient.
+						</p>
+						<p>
+						Another part of the intern experience was attending weekly roundtables to learn about company culture and the financial services industry in general.
+						I learned about financial wellness, how to identify my personal strengths, and many other things in these sessions.
+						</p>
+						<p>
+						Overall, my experience with the internship was extremely positive.
+						I learned a lot, both about data warehousing as well as the financial industry in general.
+						</p>
+						</div>
+						</div>
+						</div>
 					</div>
 				</div>
-				<div id="slide_5"class="item">
-					<div class ="text-center">
-						<h3>The Future</h3>
+				<div id="slide_5"class="item active">
+					<div class ="item-content col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+						<h3>Senior Year, and the Future</h3>
+						<div class="hidden-lg picture-fill-h-outer col-md-12">
+						<div id="f-h-pic" class="picture-fill-h-inner"></div>
+						</div>
+						<div class = "carousel-container col-lg-12">
+						<div id="f-v-pic" class="visible-lg-block  picture-fill col-lg-6"></div>
+						<div class="item-pad">
+						<div class = "item-block text-left col-lg-6">
+						<p>
+						This year I am going to study abroad in the <a href="http://www.osaka-u.ac.jp/en/international/inbound/exchange_program/oussep/oussepguide">Osaka University Short-term Student Exchange Program</a>, and will be there for two semesters.
+						This will delay my graduation by a year, which would otherwise be May 2016, but I decided that I could not miss an opportunity to live in Japan for a year.
+						</p>
+						<p>
+						I regret that I will miss the graduation of many of my friends, but I'm excited at all the opportunities this study abroad experience will give me.
+						Some of the academic goals I have this upcoming year are:
+						</p>
+						<ul class = "bullet-list">
+						<li>Work diligently on my student research with Dr. Fujiwara, with the hope of producing an undergraduate publication</li>
+						<li>Study the Japanese language and better understand Japanese culture</li>
+						<li>Learn about computer vision and other machine learning topics</li>
+						<li>Enrich my portfolio with more independent programming projects</li>
+						</ul>
+						</div>
+						</div>
+						</div>
 					</div>
 				</div>
 			  </div>
 
 			  <!-- Controls -->
 			  <a class="hidden-xs hidden-sm  left carousel-control"href="#carousel-example-generic"role="button"data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left black"aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-chevron-left black" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			  </a>
 			  <a class="hidden-xs hidden-sm  right carousel-control"href="#carousel-example-generic"role="button"data-slide="next">
@@ -669,45 +1422,44 @@
 			</div>
         </div>
     </section>
-
-    
-
-
-    <section class="bg-primary"id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn"data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <aside class="bg-dark">
+	
+    <section id="contact" class="bg-dark">
         <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#"class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
+                <div id="link-box" class="col-sm-8 col-sm-offset-2 text-center">
+                    <h2 class="section-heading">Links to Things</h2>
+                    <hr class="light">
+					<div class="col-md-2 col-md-offset-2 col-xs-3 text-center">
+						<i class="fa fa-file-pdf-o fa-3x wow bounceIn"></i>
+						<p><a href="">Resume</a></p>
+					</div>
+					<div class="col-md-2 col-xs-3 text-center">
+						<i class="fa fa-trophy fa-3x wow bounceIn" data-wow-delay=".033s"></i>
+						<p><a href="https://www.hackerrank.com/zerofive1">Hackerrank</a></p>
+					</div>
+					<div class="col-md-2 col-xs-3 text-center">
+						<i class="fa fa-github fa-3x wow bounceIn" data-wow-delay=".066s"></i>
+						<p><a href="https://github.com/brucezheng">Github</a></p>
+					</div>
+					<div class="col-md-2 col-xs-3 text-center">
+						<i class="fa fa-envelope-o fa-3x wow bounceIn"data-wow-delay=".1s"></i>
+						<p><a href="mailto:brucezheng@tamu.edu">Email</a></p>
+					</div>
+                </div>
         </div>
     </aside>
 	
 	
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+	
+    <!-- touchSwipe -->
+    <script src="js/jquery.touchSwipe.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<!-- ScrollTo -->
+	<script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
 	
     <!-- jQuery -->
     <!-- script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
@@ -742,17 +1494,10 @@
 	function resize_xs_wide() {
 		var w = $(window).width();
 		var h = $(window).height();
-		if(w < 750 && h / w < 1 && !short) {
+		if(w < 750 && (h / w) < 1 && !short) {
 			short = true;
 			if(w > 500) $('.header-content').css('padding', '100px 60px');
 			else $('.header-content').css('padding', '100px 25px');
-			$('.porfolio-img-xs').each(function() {
-				url = $(this).attr("src");
-				if(reg_img.test(url)) {
-					var match = reg_img.exec(url);
-					$(this).attr("src",match[1] + "_short"+ match[2]);
-				}
-			});
 			$('.profile-blurb').removeClass('col-xs-12');
 			$('.profile-blurb').addClass('col-xs-10');
 			$('.profile-blurb').addClass('col-xs-offset-1');
@@ -780,19 +1525,32 @@
 				$('.profile-blurb').addClass('col-xs-12');
 			}
 		}
-		
-		if(w < 400) {
-			$('.item-content, .item-block').css('padding-left', '5px');
-			$('.item-content, .item-block').css('padding-right', '5px');
-			$('li').css('word-break', 'break-all');
-		} else {
-			$('.item-content, .item-block').css('padding-left', '15px');
-			$('.item-content, .item-block').css('padding-right' ,'15px');
-			$('li').css('word-break', 'normal');
-		}
+	}
+	
+	function resize_ray() {
+		$('.scale-ray-container').each(function() {
+			var width;
+			width = $(this).parent().width();
+			if (width > 700) width = width - (width - 700) * .5;
+			width = Math.min(width,2048);
+			$(this).css('width',width);
+			$(this).find('.scale-ray-img').css('width',width);
+		});
+	}
+	
+	function resize_proj() {
+		$('.scale-proj-container').each(function() {
+			var width;
+			width = $(this).parent().width();
+			width = Math.min(width,640);
+			$(this).css('width',width);
+			$(this).find('.scale-proj-img').css('width',width);
+		});
 	}
 	
 	function arcs_sm_app_close() {
+		var parent_id = '#arcs-sm-snap-container';
+		$(parent_id).height($('#arcs-sm-place').height());
 		$('#arcs-sm-place').show();
 		$('#arcs-sm-app').hide();
 	}
@@ -803,6 +1561,13 @@
 	}
 	
 	$('#arcs-sm-place').on('click', function() {
+		var parent_id = '#arcs-sm-snap-container';
+		var oldHeight = $('#arcs-sm-place').height();
+		var newHeight = $('#arcs-sm-app').height();
+		$(parent_id).height(oldHeight);
+		$(parent_id).animate({height: newHeight}, 400, function() {
+			$(parent_id).height('auto');
+		});
 		$('#arcs-sm-place').hide();
 		$('#arcs-sm-app').show();
 	});
@@ -820,16 +1585,23 @@
 	
 	function portfolio_a(id) {
 		var parent_id = "#" + $(id).parent().attr('id');
+		var button = $(".portfolio-button[target-content='" + id + "']");
 		var open = $(id).parent().attr('aria-expanded') == 'true';
 		var visible = $(id).attr('visible') == 'true';
-		//console.log(id + ' ' + visible + ' ' + open);
+		//console.log(id + " " + open + " " + visible + " " + (!open || !visible));
 		if(!visible) {
 			var oldHeight = $(parent_id).height();
 			$(id).parent().find("[visible='true']").each(function() {
+				this_button = $(".portfolio-button[target-content='#" + $(this).attr('id') + "']")
+				this_button.removeClass('expanded');
 				$(this).attr('visible','false');
 				$(this).hide();
 			});
 			$(id).attr('visible','true');
+			
+			if(id == '#portfolio-content-lg-5' || id == '#portfolio-content-sm-5') setTimeout(resize_ray, 1);
+			if(id == '#portfolio-content-sm-1') setTimeout(resize_proj, 1);
+			
 			if(open) {
 				$(".portfolio-button[data-target='" + parent_id + "']").each(function () {
 					$(this).attr('data-toggle','');
@@ -844,10 +1616,15 @@
 			else {
 				$(id).show();
 			}
+			setTimeout( function() { $(parent_id).css('background-color',$(id).css('background-color')); }, 0);
 		} else if (open) {
-			$(".portfolio-button[target-content='" + id + "']").attr('data-toggle','collapse');
+			button.attr('data-toggle','collapse');
 			if(id == '#portfolio-content-sm-1') arcs_sm_app_close();
 			if(id == '#portfolio-content-lg-1') arcs_lg_app_close();
+		}
+		if(!open || !visible) {
+			button.addClass('expanded');
+			console.log("expand" + id);
 		}
 	}
 	
@@ -867,6 +1644,8 @@
 	$( window ).resize(function() {
 		resize_xs_wide();
 		resize_profile_pics();
+		resize_ray();
+		resize_proj();
 	});
 	
 	$( '.carousel' ).carousel({
@@ -879,40 +1658,112 @@
 		var tgt = $(this).attr('target-content');
 		var date = new Date();
 		var now = date.getTime();
+		var data_tgt = $(this).attr('data-target');
 		time_of_last[tgt] = now;
 		
 		var tgt_cont = $(this).attr('target-content');
 		
+		if (!($(data_tgt).hasClass('in'))) {
+			$(this).addClass('expanded');
+		} else if ($(tgt_cont).attr('visible') == 'true') {
+			$(this).removeClass('expanded');
+		}
+		
 		setTimeout(portfolio_a(tgt_cont), 1);
-		var data_tgt = $(this).attr('data-target');
+		
 		
 		if ($(this).attr('data-toggle') == 'collapse') { 
 			$(".portfolio-button[data-target='" + data_tgt + "']").each(function() {
 				$(this).attr('data-toggle','collapse');
 			});
 		} 
-		
+		/*
 		if (!($(data_tgt).hasClass('in'))) {
+			$(this).addClass('expanded');
 			var collapse_type = 'collapse-sm';
 			if (!($(data_tgt).hasClass('collapse-sm')))
 				collapse_type = 'collapse-lg';
 			$('.' + collapse_type + '.in').each(function() {
 				var this_id = '#' + $(this).attr('id');
-				setTimeout(portfolio_b(this_id), 1);
+				//setTimeout(portfolio_b(this_id), 1);
 			});
-		}	
+		} else {
+			//$(this).removeClass('expanded');
+		}
+		*/
+	});
+
+	var activeItemHeight;
+	var newItemHeight;
+	var itemHeights = [];
+	
+	function item_height_init() {
+		activeItemHeight = $('.item.active').find('.item-content').height();
+		var totalItems = $('.item').length;
+		for(i = 0; i < totalItems; ++i) {
+			itemHeights.push($('div.item:nth-child(' + (i + 1) + ')').find('.item-content').height());
+		}
+	}
+	
+	function transition_item_height() {
+		var containerHeight = $('#carousel-example-generic').height();
+		var differential = (newItemHeight - activeItemHeight);
+		//console.log('container: ' + containerHeight + ' difference: ' + differential);
+		//$('#carousel-example-generic').height(containerHeight + differential);
+		activeItemHeight = newItemHeight;
+	}
+	
+	$( '.carousel').on('slide.bs.carousel', function (e) {
+        var nextH = $(e.relatedTarget).height();
+        //console.log(nextH)
+        //console.log( $(this).find('.active.item').parent() )
+        $(this).find('.active.item').parent().animate({
+            height: nextH
+        }, 650);
+    });
+	
+	$(".carousel-inner").swipe( {
+		//Generic swipe handler for all directions
+		swipeLeft:function(event, direction, distance, duration, fingerCount) {
+			$(this).parent().carousel('next'); 
+		},
+		swipeRight: function() {
+			$(this).parent().carousel('prev'); 
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		threshold:75
 	});
 	
+	$('#collapse-xs-1').on('show.bs.collapse', function() {
+		setTimeout(resize_proj, 1);
+	});
+	
+	$('#collapse-xs-5').on('show.bs.collapse', function() {
+		setTimeout(resize_ray, 1);
+	});
+	
+	$('.collapse-xs').on('show.bs.collapse', function() {
+		var collapse = this;
+		setTimeout(function() {
+			var width = $(collapse).find('.col-xs-12').width();
+			$(collapse).find('.image-border').each(function() {
+				$(this).css('max-width',width);
+				$(this).parent().css('max-width',width);
+			});
+		});
+	});
+
 	$( document ).ready(function() {
 		resize_xs_wide();
-		resize_profile_pics()
+		resize_profile_pics();
 		var msg, hr = new Date().getHours();
 		if(hr < 5 || hr > 22) msg = "Hey there, night owl";
 		else if (hr < 12 ) msg = "Good morning";
 		else if (hr < 18) msg = "Good afternoon";
 		else msg = "Good evening";
 		$('#welcome_msg').text(msg);
-		portfolio_init()
+		portfolio_init();
+		item_height_init();
 	});
 	</script>
 </body>
